@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormatStringAndDatTime-CSharp", "format-string-datetime\FormatStringAndDatTime-CSharp.csproj", "{C21B9AB1-BBFA-4792-ABF8-19776B96D80A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormatStringAndDateTime-CSharp", "format-string-datetime\FormatStringAndDateTime-CSharp.csproj", "{C21B9AB1-BBFA-4792-ABF8-19776B96D80A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
