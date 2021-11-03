@@ -14,6 +14,7 @@ namespace format_string_datetime
 
             Console.WriteLine();
 
+            // Convert a string input to DateTime value
             string dateTimeStringInput = "2020-08-02T06:00:00.000Z";
             DateTime dateTimeInput = DateTime.Parse(dateTimeStringInput, new CultureInfo("es-AR"));
 
@@ -22,6 +23,7 @@ namespace format_string_datetime
 
             Console.WriteLine();
 
+            // Creates a string output by DateTime values
             string output = dateTimeInput.ToString("dd/MM/yyyy") + " (" + dateTimeInput.ToString("MMMM").ToUpper().Substring(0, 3) + " " + dateTimeInput.ToString("yy") + ")";
             Console.WriteLine(output);
         }
