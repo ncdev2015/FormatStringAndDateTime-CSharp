@@ -7,14 +7,14 @@ namespace format_string_datetime
     {
         static void Main(string[] args)
         {
-            // Get a Default DateTime value
+            // Get a Default DateTime
             DateTime dateTime = new DateTime();
             Console.WriteLine("dateTime: " + dateTime); // ->  1/1/0001 12:00:00 a. m.
             Console.WriteLine("dateTime (dd/MM/yyyy): " + dateTime.ToString("dd/MM/yyyy")); // -> 01/01/0001
 
             Console.WriteLine();
 
-            // Convert a string input to DateTime value
+            // Convert string input to DateTime
             string dateTimeStringInput = "2020-08-02T06:00:00.000Z";
             DateTime dateTimeInput = DateTime.Parse(dateTimeStringInput, new CultureInfo("es-AR"));
 
@@ -23,9 +23,17 @@ namespace format_string_datetime
 
             Console.WriteLine();
 
-            // Creates a string output by DateTime values
+            // Creates a string output from DateTime with mont and year in ()
             string output = dateTimeInput.ToString("dd/MM/yyyy") + " (" + dateTimeInput.ToString("MMMM").ToUpper().Substring(0, 3) + " " + dateTimeInput.ToString("yy") + ")";
             Console.WriteLine(output); // -> 02/08/2020 (AGO 20)
+
+            // Convert es-AR string dateTime to us-US format
+            string inputDtString = "20/11/2021";
+            string[] arr = inputDtString.Split("/");
+            DateTime dt = new DateTime(Convert.ToInt32(arr[2]), Convert.ToInt32(arr[1]), Convert.ToInt32(arr[0]));
+
+            Console.WriteLine();
+            Console.WriteLine(dt.ToString("yyyy-MM-dd"));
         }
     }
 }
