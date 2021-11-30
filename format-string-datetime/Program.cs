@@ -34,6 +34,10 @@ namespace format_string_datetime
 
             Console.WriteLine();
             Console.WriteLine(dt.ToString("yyyy-MM-dd"));
+
+            // Verify hours
+            DateTime dt_hours = new DateTime(2021, 11, 30, 1, 50, 50);
+            Console.WriteLine(dt_hours.ToString("HH:mm:ss")); // -> 01:50:50
         }
     }
 }
