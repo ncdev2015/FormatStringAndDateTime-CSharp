@@ -38,6 +38,21 @@ namespace format_string_datetime
             // Verify hours
             DateTime dt_hours = new DateTime(2021, 11, 30, 1, 50, 50);
             Console.WriteLine(dt_hours.ToString("HH:mm:ss")); // -> 01:50:50
+
+            // Datetime by yyyymmdd format
+            string strNewDate = "20211127";
+            TimeSpan time = TimeSpan.FromSeconds(int.Parse("065556"));
+
+            DateTime dt_newFormat = new DateTime(
+                Convert.ToInt32(strNewDate.Substring(0, 4)), // Year
+                Convert.ToInt32(strNewDate.Substring(4, 2)), // Month
+                Convert.ToInt32(strNewDate.Substring(6, 2)), // Days
+                time.Hours,
+                time.Minutes,
+                time.Seconds
+                );
+
+            Console.WriteLine(strNewDate + " to datetime: " + dt_newFormat);
         }
     }
 }
